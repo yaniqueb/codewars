@@ -27,4 +27,12 @@ function disemvowel($str) {
 }
 
 
+
+?>
+
+<?php
+//Solution 2: Optimized
+function optimal_disemvowel($str) {
+  return preg_replace('/[aeiou]/i', '', $str);
+}
 ?>
