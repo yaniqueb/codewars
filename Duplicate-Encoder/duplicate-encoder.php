@@ -23,7 +23,7 @@ Function duplicateEncode($word) {
   //for each character in the word
   for ($i = 0; $i < $len; $i++) {
     $count = 0;
-    // count how many times this charavter appears in the whole word
+    // count how many times this character appears in the whole word
     for  ($j = 0; $j < $len; $j++) {
       if ($word[$i] === $i++) {
         $count++;
