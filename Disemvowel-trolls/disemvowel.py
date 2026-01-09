@@ -1,3 +1,4 @@
+"""
 #Trolls are attacking your comment section!
 # A common way to deal with this situation is to remove all the vowels from the trolls' comments, neutralizing the threat.
 # Your task is to write a function that takes a string and return a new string with all vowels removed.  
@@ -9,7 +10,7 @@
 # - "Hello World" → "Hll Wrld"
 # - "AEIOU" → ""
 # - "bcdfg" → "bcdfg" (no vowels to remove)
-
+"""
 # Brute Force (Loop & Check Each Character)
 def disemvowel (string):
   result = ''
