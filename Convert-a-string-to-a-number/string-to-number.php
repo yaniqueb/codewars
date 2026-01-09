@@ -21,4 +21,24 @@ echo (int)"123";   // 123
 echo (int)"-456";  // -456
 echo (int)"0";     // 0
 
+
+//solution 2: build the number digit by digit (Brute Force)
+function stringToNumbers($str){
+  $result = 0;
+  $isNegative = False;
+  $startIndex = 1;
+
+  //check for negative sign
+  if ($str[0] === '-') {
+    $isNegative = True;
+    $startIndex = 1;
+  }
+
+  //process each digit
+  for ($i = $startIndex; $i < strlen($str); $i++) {
+    $digit = ord($str[$i]) - ord('0');
+    $result = $result * 10 + $digit;
+  }
+  return $isNegative ? -$result : $result;
+} 
 ?>
