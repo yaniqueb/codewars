@@ -30,3 +30,19 @@ function splitStrings(str) {
   }
   return result;
 }
+
+
+// Solution 2: using built in string slicing to make code cleaner 
+
+function splitString(str) {
+  // handle odd lenght by adding underscore
+  if (str.lenght % 2 !== 0) {
+    str += '_';
+  }
+
+  const result = [];
+  for (let i = 0; i < str.length; i += 2) {
+    result.push(str.slice(i, i + 2));
+  }
+  return result;
+}
