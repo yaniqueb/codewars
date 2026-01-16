@@ -22,3 +22,16 @@ def split_strings(s):
     result.append(pair)
 
   return result
+
+# solution 2: simplified code
+def split_string(s):
+  # handle odd length by adding uncerscore
+  if len(s) % 2 != 0:
+    s += '_'
+
+  result = []
+  for i in range(0, len(s), 2):
+    result.append(s[i:i+2])
+
+  return result
+
