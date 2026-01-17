@@ -45,4 +45,4 @@ function splitString(str) {
     result.push(str.slice(i, i + 2));
   }
   return result;
-}
+} 
