@@ -26,6 +26,19 @@ function splitString($str) {
   return result;
 }
 
+//solution 2 : use built-in string slicing
+function splitStrings($str) {
+  // handle odd length by adding underscore
+  if (strlen($str) % 2 != 0) {
+    $str .= '_';
+  }
+
+  $result = [];
+  for ($i = 0; $i < strlen($str); $i += 2) {
+    $result[] = substr($str, $i, 2);
+  }
+  return $result;
+}
 
 
 
