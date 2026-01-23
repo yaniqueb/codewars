@@ -35,3 +35,10 @@ function reverseWords(str) {
 console.log(reverseWords('The quick brown fox jumps over the lazy dog.'));
 console.log(reverseWords('apple'));
 console.log(reverseWords('  double  spaced  words  '));
+
+
+// solution 2: using js buil-in functions 
+function reverseWords(str) {
+  return str.split(' ').map(word => [...word].reverse().join('')).join(' ');
+}
+
