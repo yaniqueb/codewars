@@ -32,4 +32,14 @@ function reverseWords($str) {
 echo(reverseWords('The quick brown fox jumps over the lazy dog.'));
 echo(reverseWords('apple'));
 echo(reverseWords('  double  spaced  words  '));
+
+
+//solution 2: clean & simplified 
+function reverseWord($str) {
+  //split by spaces, reverse each word, join back
+  $words = explode(' ', $str);
+  $reversed = array_map('strrev', $words);
+  return implode(' ', $reversed);
+}
+
 ?>
