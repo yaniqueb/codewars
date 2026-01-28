@@ -32,3 +32,19 @@ def duplicate_encode(word):
             result += '('
     
     return result
+
+
+# solution 2 : Using Built-in count function
+def duplicate_encoder(word):
+    # convert the word to lowercase to ignore capitalizations
+    word = word.lowercase()
+    result = ''
+
+    #for each character use pythons built-in count() method
+    for char in word:
+        if word.count(char) > 1:
+            result += ')'
+        else:
+            result += '('
+
+    return result
