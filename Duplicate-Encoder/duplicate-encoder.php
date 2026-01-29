@@ -44,4 +44,17 @@ echo duplicateEncode("din");      // "((("
 echo duplicateEncode("recede");   // "()()()"
 echo duplicateEncode("Success");  // ")())())"
 
+
+// solution 2: Using a foreach with php's built-in substr_count
+Function duplicateEncoder($word) {
+  $word = strtolower($word);
+  $result = '';
+
+  //str_split converts string to array of characters 
+  foreach (str_split($word) as $char) {
+    $count = substr_count($word, $char);
+    $result .= $count > 1 ? ')' : '(';
+  }
+  return $result;
+}
 ?>
