@@ -20,3 +20,17 @@ function digitalRoot(n) {
   }
   return n;
 }
+
+// solution 2: String Conversion
+function digitalRoots(n) {
+  while (n >= 10){
+    let sum =0;
+    const digits = String(n).split('');
+
+    for (const digit of digits) {
+      sum += Number(digit);
+    }
+    n = sum
+  }
+  return n;
+}
