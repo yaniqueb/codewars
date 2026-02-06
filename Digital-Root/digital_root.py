@@ -25,3 +25,6 @@ def digital_root(n):
   return n    
 
 
+# Solution 2: recursive
+def digital_roots(n):
+  return 0 if n == 0 else (n - 1) % 9 + 1
