@@ -26,5 +26,14 @@ function digital_root($n) {
   return $n;
 }
 
+//solution 2: use recursion to repeatedly sum digits until single digit
+function digital_roots($n) {
+  //base case: single digit
+  if ($n < 10) {
+    return $n;
+  }
+  //recursively process sum of digits
+  return digital_root(array_sum(str_split((string)$n)));
+}
 
 ?>
