@@ -8,3 +8,8 @@ function sumSquares(array) {
     .map(num => num * num)
     .reduce((sum, squared) => sum + squared, 0);
 }
+
+// solution 02: single pass reduce with exponentiation
+function sumSquare(array) {
+  return array.reduce((sum, num) => sum + num ** 2, 0);
+}
